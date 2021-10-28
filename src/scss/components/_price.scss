@@ -1,0 +1,313 @@
+.price {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    @include media-up(sm) {
+        padding-left: 30px;
+    }
+    @include media-up(lg) {
+        padding-left: 0px;
+    }
+
+    &__price {
+        position: relative;
+        flex: 0 0 77%;
+        display: flex;
+        align-items: center;
+        order: 0;
+
+        @media (max-width: 450px) {
+            flex: 0 0 90%;
+        }
+
+        @include media-up(lg) {
+            flex: 0 0 80%;
+        }
+
+        @include media-up(xl) {
+            display: block;
+            flex: 0 0 250px;
+        }
+    }
+
+    &__old-price {
+        order: 1;
+        margin: 0px 0px 0px 20px;
+        position: relative;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--xln-dark-3);
+
+        @media (max-width: 450px) {
+            font-size: 18px;
+        }
+
+        @include media-up(xl) {
+            order: 0;
+            margin: 5px 0px 0px 8px;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 67px;
+            height: 2px;
+            top: 50%;
+            left: -2%;
+            background-color: #f00;
+
+            @media (max-width: 450px) {
+                width: 45px;
+            }
+        }
+    }
+
+    &__new-price {
+        order: 0;
+        margin-top: -10px;
+        font-size: 48px;
+        font-weight: 700;
+
+        @media (max-width: 450px) {
+            font-size: 32px;
+        }
+
+        @include media-up(xl) {
+            order: 1;
+        }
+    }
+
+    &__percent-sale {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        background-color: var(--xln-orange);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--xln-light);
+        }
+    }
+
+    &__clock {
+        flex: 0 0 auto;
+
+        order: 2;
+        @include media-up(sm) {
+            flex: 0 0 100%;
+            order: 1;
+        }
+        @include media-up(md) {
+            // flex: 0 0 50%;
+            margin-left: 0px;
+        }
+        @include media-up(lg) {
+            margin-bottom: 20px;
+            flex: 0 0 100%;
+        }
+
+        @include media-up(xl) {
+            margin-top: 0px;
+        }
+
+        @include media-up(xl) {
+            flex: 0 0 45%;
+            margin-left: 20px;
+        }
+
+        @include media-up(xxl) {
+            margin-left: 60px;
+        }
+    }
+
+    &__amount {
+        flex: 0 0 auto;
+        order: 1;
+        margin-right: 60px;
+        @media (max-width: 450px) {
+            margin-left: 80px;
+        }
+
+        @include media-up(sm) {
+            order: 2;
+        }
+    }
+
+    &__button {
+    }
+}
+.clock {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 450px) {
+        margin-left: 20px;
+    }
+
+    &__header {
+        display: flex;
+        font-size: 14px;
+        font-weight: 600;
+        span {
+            margin-left: 5px;
+        }
+    }
+
+    &__timer {
+        margin: 5px 0px 0px 27px;
+        display: flex;
+        span {
+            padding: 0px 5px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+
+    &__value {
+        width: 60px;
+        height: 55px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--xln-yellow);
+        font-size: 25px;
+        font-weight: 500;
+        line-height: normal;
+
+        span {
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        &_hour {
+        }
+
+        &_minute {
+        }
+
+        &_second {
+        }
+    }
+}
+.amount {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+
+    @include media-up(lg) {
+        margin-top: 7px;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &__name {
+        font-weight: 500;
+    }
+
+    &__item {
+        margin: 10px 0px 0px -3px;
+        height: 37px;
+        text-align: center;
+        display: flex;
+        border: solid 1px #c4c4c4;
+        border-radius: 20px;
+        overflow: hidden;
+        font-size: 20px;
+
+        @include media-up(lg) {
+            margin: -4px 0px 0px 20px;
+        }
+    }
+
+    &__plus {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 39.6px;
+        height: 100%;
+        background-color: #efefef;
+    }
+
+    &__value {
+        width: 37px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__minus {
+        font-size: 20px;
+        width: 39.6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #efefef;
+    }
+
+    &__button {
+    }
+}
+
+.price-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 45px 0px 0px -30px;
+    width: 100vw;
+    height: 59px;
+    background-color: var(--xln-orange);
+    color: var(--xln-light);
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @include media-up(md) {
+        margin: 30px 0px 0px 0px;
+        width: 277px;
+    }
+    span {
+        font-size: 18px;
+        font-weight: bold;
+
+        @media (max-width: 450px) {
+            font-size: 14px;
+        }
+    }
+
+    &__new-price {
+        font-size: 33px;
+        font-weight: bold;
+        margin-left: 20px;
+
+        @media (max-width: 450px) {
+            font-size: 24px;
+        }
+
+        @include media-up(md) {
+            display: none;
+        }
+    }
+
+    &__old-price {
+        margin-left: 20px;
+        font-size: 24px;
+        font-weight: 500;
+        color: #4a1414;
+        text-decoration: line-through;
+
+        @media (max-width: 450px) {
+            font-size: 18px;
+        }
+
+        @include media-up(md) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+._container {
+    margin: 0 auto;
+
+    @include media-up(lg) {
+        padding: 0px 20px;
+    }
+
+    @include media-up(xxl) {
+        padding: 0;
+        max-width: 1240px;
+    }
+
+    @include media-up(xxxxl) {
+        max-width: 1240px;
+    }
+}

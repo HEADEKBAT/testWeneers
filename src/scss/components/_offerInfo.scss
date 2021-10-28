@@ -1,0 +1,132 @@
+.offer-info {
+    margin-top: 120px;
+    padding-left: 10px;
+
+    @include media-up(lg) {
+        margin-top: 0px;
+        padding-left: 0px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        line-height: normal;
+        font-size: 33px;
+        font-weight: 600;
+        @media (max-width: 450px) {
+            font-size: 22px;
+        }
+    }
+
+    &__subtitle {
+        // margin-top: 3px;s
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 5px;
+
+        @media (max-width: 450px) {
+            font-size: 14px;
+        }
+
+        @include media-up(lg) {
+            margin-top: 0px;
+        }
+    }
+
+    &__discription {
+        margin-top: 12px;
+        line-height: 1.27;
+        max-width: 420px;
+
+        @media (max-width: 450px) {
+            font-size: 14px;
+        }
+
+        @include media-up(lg) {
+            line-height: 1.27;
+            margin-top: 10px;
+        }
+    }
+
+    &__active-info {
+        margin-top: 12px;
+        @include media-up(lg) {
+            margin-top: 10px;
+        }
+    }
+}
+.active-info {
+    display: flex;
+    color: var(--xln-dark-3);
+    font-size: 16px;
+
+    @media (max-width: 450px) {
+        font-size: 12px;
+    }
+
+    &__stars {
+        display: flex;
+        align-items: center;
+        img {
+            margin-left: 3px;
+            @include media-up(lg) {
+                margin-left: 5px;
+            }
+        }
+
+        span {
+            padding-left: 10px;
+        }
+        &:after {
+            content: "";
+            margin-left: 15px;
+            width: 1px;
+            height: 19px;
+            background-color: #727272;
+        }
+    }
+
+    &__comments {
+        padding-left: 14px;
+        display: flex;
+        align-items: center;
+
+        &:after {
+            content: "";
+            display: block;
+            margin-left: 8px;
+            width: 1px;
+            height: 19px;
+            background-color: #727272;
+        }
+    }
+
+    &__sales {
+        padding-left: 10px;
+    }
+
+    &__delivery {
+        margin-top: 10px;
+        display: flex;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #dcdcdc;
+
+        img {
+            margin-left: 2px;
+            @include media-up(lg) {
+                margin-left: 8px;
+            }
+        }
+
+        span {
+            padding-left: 12px;
+
+            @media (max-width: 450px) {
+                font-size: 14px;
+            }
+
+            @include media-up(lg) {
+                padding-left: 8px;
+            }
+        }
+    }
+}
